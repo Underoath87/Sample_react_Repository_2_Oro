@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavigationBar from "./components/NavigationBar";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Contactus from "./pages/Contactus";
+import Aboutus from './pages/Aboutus';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <BrowserRouter>
+
+    <NavigationBar></NavigationBar>
+    <Routes>
+      <Route path="/" element={<Home></Home>}></Route>
+      <Route path="about" element={<Aboutus/>}></Route>
+      <Route path="contact" element={<Contactus/>}></Route>
+    </Routes>
+
+    </BrowserRouter>
+    
+      <h1 className="text-danger">Hello World</h1>
+    </>
+
   );
 }
 
