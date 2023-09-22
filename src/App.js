@@ -5,6 +5,11 @@ import Home from "./pages/Home";
 import Contactus from "./pages/Contactus";
 import Aboutus from './pages/Aboutus';
 
+// Import Class State
+import ClassState from "./pages/ClassState"
+import FunctionalState from "./pages/FunctionalState";
+import BasicFormHandling from "./pages/BasicFormHandling";
+
 function App() {
   return (
     <>
@@ -15,6 +20,16 @@ function App() {
       <Route path="/" element={<Home></Home>}></Route>
       <Route path="about" element={<Aboutus/>}></Route>
       <Route path="contact" element={<Contactus/>}></Route>
+      
+      
+      {/* Using It as a Component */}
+      <Route path="/classState" element={<ClassState/>}></Route>
+      
+       {/* Using It as a Component */}
+      <Route path="/functionalUseState" element={<FunctionalState/>}></Route>
+      <Route path="basicFormHandling" element={<BasicFormHandling/>}></Route>
+
+
     </Routes>
 
     </BrowserRouter>
